@@ -1,16 +1,15 @@
-// Enumerated Type
+// Union Type
 
-enum ApprovalStatus {
-    draft,
-    submitted,
-    approved,
-    rejected
-};
+let tax: number| string =10;
 
-const request = {
-    id: 1,
-    status: ApprovalStatus.approved,
-    description: "Please approve this request"
-};
+tax = 100;
+tax = '$10';
 
-if(request.status === ApprovalStatus.approved) console.log("Send the email to the Augustine ")
+let requestStatus: 'pending'| 'success' | 'error' = 'pending'
+requestStatus = 'success';
+requestStatus = 'error';
+requestStatus = 'pending'
+// requestStatus = 'invalid'; // Error: Type '"invalid"' is not assignable to type '"
+// "pending" | "success" | "error".
+
+console.log(requestStatus)
