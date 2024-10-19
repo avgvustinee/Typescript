@@ -1,5 +1,14 @@
-function applyDiscount(price: number, discount: number = 0.05): number {
-    return price * (1 - discount);
-}
+/*
+function fn(...rest: type[]) {
+   //...
+}*/
 
-console.log(applyDiscount(100)); 
+function getTotal(...numbers:number[]) : number{
+    let total = 0;
+    numbers.forEach((num) => total+=num);
+    return total;
+
+}
+console.log(getTotal());
+console.log(getTotal(10,20));
+console.log(getTotal(10,20,30,40))
