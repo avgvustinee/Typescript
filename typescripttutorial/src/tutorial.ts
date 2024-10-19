@@ -1,21 +1,12 @@
-// object
+// Array
 
-let employee: {
-    firstName: string;
-    lastName: string;
-    age: number;
-    occupation: string;
-};
+let skills: string[];
+skills= ['Software Engineer', 'Data Engineer']
+skills.push('Cloud Engineer')
+console.log(skills)
 
-employee = {
-    firstName: 'Kholofelo Augustine  ',
-    lastName: 'Shokane',
-    age: 24,
-    occupation: 'Software Developer'
+// TypeScript infers the scores array as an array of string | number
 
-
-}
-
-
-
-console.log(employee)
+let scores :(string| number)[]; 
+scores= ['Programming', 5 , 'Theory', 6]
+console.log(scores);
