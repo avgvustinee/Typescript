@@ -1,9 +1,5 @@
-function multiply(a: number, b: number, c?: number): number {
-
-    if (typeof c !== 'undefined') {
-        return a * b * c;
-    }
-    return a * b;
+function applyDiscount(price: number, discount: number = 0.05): number {
+    return price * (1 - discount);
 }
 
-console.log(multiply(2,3,3))
+console.log(applyDiscount(100)); 
