@@ -1,15 +1,22 @@
-// Union Type
+// type Aliases
 
-let tax: number| string =10;
+type Name = string;
+let firstName: Name;
+let lastName: Name;
 
-tax = 100;
-tax = '$10';
+type Person = {
+    name: string;
+    age: number;
+};
 
-let requestStatus: 'pending'| 'success' | 'error' = 'pending'
-requestStatus = 'success';
-requestStatus = 'error';
-requestStatus = 'pending'
-// requestStatus = 'invalid'; // Error: Type '"invalid"' is not assignable to type '"
-// "pending" | "success" | "error".
+let person: Person = {
+    name: 'John',
+    age: 25
+};
 
-console.log(requestStatus)
+
+type alphanumeric = string | number;
+
+let input: alphanumeric;
+input = 100; // valid
+input = 'Hi'; // valid
