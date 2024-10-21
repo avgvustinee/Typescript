@@ -1,14 +1,6 @@
-/*
-function fn(...rest: type[]) {
-   //...
-}*/
+// spread operator
 
-function getTotal(...numbers:number[]) : number{
-    let total = 0;
-    numbers.forEach((num) => total+=num);
-    return total;
-
-}
-console.log(getTotal());
-console.log(getTotal(10,20));
-console.log(getTotal(10,20,30,40))
+const original = {a:1,b:2,c:3}
+//Creates a shallow copy of the array
+const copy = {...original}
+console.log(copy);
